@@ -1,0 +1,14 @@
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/bin/Debug/net9.0/AnimalSimulaion
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/bin/Debug/net9.0/AnimalSimulaion.deps.json
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/bin/Debug/net9.0/AnimalSimulaion.runtimeconfig.json
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/bin/Debug/net9.0/AnimalSimulaion.dll
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/bin/Debug/net9.0/AnimalSimulaion.pdb
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.GeneratedMSBuildEditorConfig.editorconfig
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.AssemblyInfoInputs.cache
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.AssemblyInfo.cs
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.csproj.CoreCompileInputs.cache
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.dll
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/refint/AnimalSimulaion.dll
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.pdb
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.genruntimeconfig.cache
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/ref/AnimalSimulaion.dll
