@@ -29,9 +29,15 @@ namespace Application
 
             animals = new List<Animal>();
 
-            var dog = new Dog("Бобік", owner);
-            var canary = new Canary("Кеша", shop);
-            var lizard = new Lizard("Рексі", owner);
+//Використання Factory Method Pattern
+//Дозволяє легко додавати нові типи тварин без зміни цього класу
+            var dogFactory = new DogFactory();
+            var canaryFactory = new CanaryFactory();
+            var lizardFactory = new LizardFactory();
+
+            var dog = dogFactory.CreateAnimal("Бобік", owner);
+            var canary = canaryFactory.CreateAnimal("Кеша", shop);
+            var lizard = lizardFactory.CreateAnimal("Рексі", owner);
 
             owner.AddAnimal(dog);
             shop.AddAnimal(canary);
@@ -80,7 +86,8 @@ namespace Application
                 Console.WriteLine("5. Пограти з твариною");
                 Console.WriteLine("6. Прогулянка");
                 Console.WriteLine("7. Симуляція одного дня");
-                Console.WriteLine("8. Вихід");
+                Console.WriteLine("8. Додати нову тварину");
+                Console.WriteLine("9. Вихід");
 
                 string input = Console.ReadLine() ?? "";
 
@@ -119,6 +126,10 @@ namespace Application
                         break;
 
                     case "8":
+                        AddNewAnimal();
+                        break;
+
+                    case "9":
                         exit = true;
                         break;
                 }
@@ -202,6 +213,51 @@ namespace Application
                         break;
                 }
             }
+        }
+
+        private void AddNewAnimal()
+        {
+            Console.WriteLine("Оберіть тип тварини:");
+            Console.WriteLine("1. Собака");
+            Console.WriteLine("2. Канарка");
+            Console.WriteLine("3. Ящірка");
+            string typeChoice = Console.ReadLine() ?? "";
+
+            string type = typeChoice switch
+            {
+                "1" => "dog",
+                "2" => "canary",
+                "3" => "lizard",
+                _ => ""
+            };
+
+            if (string.IsNullOrEmpty(type))
+            {
+                Console.WriteLine("Невірний вибір.");
+                return;
+            }
+
+            Console.Write("Введіть ім'я тварини: ");
+            string name = Console.ReadLine() ?? "Невідома";
+
+            Console.WriteLine("Де буде жити тварина?");
+            Console.WriteLine("1. У власника");
+            Console.WriteLine("2. У зоомагазині");
+            string residenceChoice = Console.ReadLine() ?? "1";
+
+            IResidence residence = residenceChoice == "2" ? shop : owner;
+
+            // === Використання SimpleAnimalFactory ===
+            Animal newAnimal = SimpleAnimalFactory.Create(type, name, residence);
+
+            animals.Add(newAnimal);
+            newAnimal.ActionOccurred += OnAnimalAction;
+            newAnimal.Died += OnAnimalDied;
+
+            if (residence is Owner o) o.AddAnimal(newAnimal);
+            else if (residence is PetShop s) s.AddAnimal(newAnimal);
+
+            Console.WriteLine($"Тварина {name} успішно додана!");
         }
 
         private void WalkMenu()
