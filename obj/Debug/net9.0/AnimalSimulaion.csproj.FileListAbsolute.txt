@@ -12,3 +12,4 @@
 /Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.pdb
 /Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.genruntimeconfig.cache
 /Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/ref/AnimalSimulaion.dll
+/Users/svetlanaena/AnimalSimulation/AnimalSimulaion/obj/Debug/net9.0/AnimalSimulaion.sourcelink.json
